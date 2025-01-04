@@ -60,3 +60,21 @@
 ### `join`
 
 > 拼接路径
+
+## Event 模块
+
+> `Event` 为内置模块 可通过 `import { EventEmitter } from 'events'` 引入使用
+> 通过 **发布订阅模式** 实现 Event 事件
+
+> node 中的事件对象都是 `events.EventEmitter` 对象的实例，
+> 且多数模块都继承了事件，例如 `http`、`fs`、`stream` 模块
+
+### 常用方法
+
+- `on` 订阅事件
+- `once` 订阅一次事件
+- `emit` 触发事件
+- `removeListener` 移除事件监听
+- `removeAllListeners` 移除所有事件监听
+
+### 常用事件
