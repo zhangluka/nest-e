@@ -1,28 +1,17 @@
-import os from "os";
-import { pbkdf2, pbkdf2Sync } from "crypto";
-import path, { basename, extname, parse } from "path";
-import { EventEmitter } from "events";
-const { CustomEvent } = require("./customEvent");
+const buffer = Buffer.from("i am bobby");
 
-const cEvent = new CustomEvent();
+console.log("【log】:", buffer);
 
-cEvent.on("success", (arg: string) => {
-  console.log("【log】:", arg);
-});
+console.log("【log】:", buffer.toJSON());
 
-cEvent.customFunc("yes.jpg");
+console.log("【log】:", buffer.toString());
 
-const event = new EventEmitter();
+buffer[0] = 72;
 
-event.on("bb", (content) => {
-  console.log("【log】:", `emit first time: ${content}`);
-});
+console.log("【log】:", buffer.toString("utf-8"));
 
-event.on("bb", (c) => {
-  console.log("【log】:", `emit second tim: ${c}`);
-});
+const buffer2 = Buffer.alloc(5);
 
-const eventRes = event.emit("bb", "i am bobby");
-console.log("【log】:", `eventRes: ${eventRes}`);
+buffer2.write("booooby");
 
-console.log("【log】:", "sync execute");
+console.log("【log】:", buffer2.toString());
