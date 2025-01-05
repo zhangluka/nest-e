@@ -9,6 +9,7 @@ import {
 } from "node:fs";
 import { createServer } from "node:http";
 import path, { dirname } from "node:path";
+import "./http";
 
 console.log("【log】:", __dirname);
 
