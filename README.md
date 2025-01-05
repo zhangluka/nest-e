@@ -77,4 +77,10 @@
 - `removeListener` 移除事件监听
 - `removeAllListeners` 移除所有事件监听
 
-### 常用事件
+## fs 模块
+
+> node 通过 `fs` 模块来实现操作服务器文件读写的能力
+
+### 同步操作
+
+### 异步操作
